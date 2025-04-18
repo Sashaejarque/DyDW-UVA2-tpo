@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre mí | Planificador Académico UADE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="flex flex-col min-h-screen bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-slate-700 text-white p-4">
+      <nav class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2" aria-label="Menú principal de navegación">
+        <div class="font-bold text-center sm:text-left w-full sm:w-auto">
+          Planificador Académico UADE
+        </div>
+        <ul class="flex justify-center sm:justify-start gap-4 overflow-x-auto whitespace-nowrap w-full sm:w-auto px-1 sm:px-0">
+          <li><a href="index.html" class="hover:text-indigo-300 hover:underline">Home</a></li>
+          <li><a href="avisos.html" class="hover:text-indigo-300 hover:underline">Avisos</a></li>
+          <li><a href="materias2025.html" class="hover:text-indigo-300 hover:underline">Materias 2025</a></li>
+          <li><a href="contacto.html" class="hover:text-indigo-300 hover:underline">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-grow max-w-3xl w-full mx-auto px-4 sm:px-6 py-8">
+      <h1 class="text-3xl font-semibold text-center mb-6">Sobre mí</h1>
+
+      <section class="flex flex-col sm:flex-row items-center sm:items-start gap-6" aria-label="Información personal del estudiante">
+        <figure class="w-40 h-40 flex-shrink-0 rounded-full overflow-hidden border-4 border-slate-300 shadow-md">
+          <img
+            src="assets/img/perfil.jpeg"
+            alt="Foto de perfil de Sasha"
+            class="w-full h-full object-cover"
+          />
+        </figure>
+
+        <div>
+          <p class="text-lg font-semibold mb-2">Nombre: Sasha Ejarque</p>
+          <p class="text-base font-semibold mb-2">Carrera: Licenciatura en Gestión de Tecnologías de la Información - UADE</p>
+          <p class="text-base mb-2">
+            Soy estudiante de tecnologías de la información con fuerte interés en el desarrollo web,
+            el diseño accesible y la creación de herramientas útiles para la vida académica.
+          </p>
+          <p class="text-base">
+            Me apasiona la tecnoliga, el trabajo en equipo, aprender nuevas herramientas y construir proyectos que sean prácticos, funcionales y visualmente claros.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-slate-700 text-white text-center py-4 mt-8">
+      Curso: 518378 / Profesora: Patricia Litovicius
+    </footer>
+  </body>
+</html>

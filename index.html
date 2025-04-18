@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Planificador Académico UADE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="flex flex-col min-h-screen bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-slate-700 text-white p-4">
+      <nav class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2" aria-label="Menú principal de navegación">
+        <div class="font-bold text-center sm:text-left w-full sm:w-auto">
+          Planificador Académico UADE
+        </div>
+        <ul class="flex justify-center sm:justify-start gap-4 overflow-x-auto whitespace-nowrap w-full sm:w-auto px-1 sm:px-0">
+          <li><a href="avisos.html" class="hover:text-indigo-300 hover:underline">Avisos</a></li>
+          <li><a href="sobremi.html" class="hover:text-indigo-300 hover:underline">Sobre mí</a></li>
+          <li><a href="materias2025.html" class="hover:text-indigo-300 hover:underline">Materias 2025</a></li>
+          <li><a href="contacto.html" class="hover:text-indigo-300 hover:underline">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-6">
+      <h1 class="text-2xl sm:text-3xl font-semibold text-center mb-6">Materias del Cuatrimestre</h1>
+
+      <div class="overflow-x-auto rounded shadow-sm">
+        <table class="min-w-full table-auto border border-gray-300 text-sm sm:text-base" role="table">
+          <thead class="bg-slate-300 text-left">
+            <tr>
+              <th scope="col" class="px-4 py-2">Materia</th>
+              <th scope="col" class="px-4 py-2">Día y horario</th>
+              <th scope="col" class="px-4 py-2">Modalidad</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white">
+            <tr class="border-t border-gray-200">
+                <td class="px-4 py-2">Arquitectura de Computadoras</td>
+                <td class="px-4 py-2">Lunes 18:30hs - 20:30hs</td>
+                <td class="px-4 py-2">Virtual</td>
+              </tr>
+              <tr class="border-t border-gray-200">
+                <td class="px-4 py-2">Sistemas de Información</td>
+                <td class="px-4 py-2">Martes 18:30hs - 20:30hs</td>
+                <td class="px-4 py-2">Virtual</td>
+              </tr>
+              <tr class="border-t border-gray-200">
+                <td class="px-4 py-2">Introduccion a la algoritmia</td>
+                <td class="px-4 py-2">Miercoles 18:30hs - 20:30hs</td>
+                <td class="px-4 py-2">Virtual</td>
+              </tr>
+              <tr class="border-t border-gray-200">
+                <td class="px-4 py-2">Marketing</td>
+                <td class="px-4 py-2">Jueves 18:30hs - 20:30hs</td>
+                <td class="px-4 py-2">Virtual</td>
+              </tr>
+            <tr class="border-t border-gray-200">
+              <td class="px-4 py-2">Diseño y Desarrollo Web</td>
+              <td class="px-4 py-2">Viernes 18:30hs - 20:30hs</td>
+              <td class="px-4 py-2">Virtual</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="bg-slate-700 text-white text-center py-4 mt-8">
+      Curso: 518378 / Profesora: Patricia Litovicius
+    </footer>
+  </body>
+</html>
