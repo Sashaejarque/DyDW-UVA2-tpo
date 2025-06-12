@@ -4,29 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avisos | Planificador Académico UADE</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+ 
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {}
+        }
+      }
+    </script>
   </head>
 
-  <body class="flex flex-col min-h-screen bg-gray-50 text-gray-800 font-sans">
+  <body class="flex flex-col min-h-screen bg-gray-50 text-gray-800 font-sans dark:bg-slate-900 dark:text-gray-300">
     <header class="bg-slate-700 text-white p-4">
       <nav class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2" aria-label="Menú principal de navegación">
         <div class="font-bold text-center sm:text-left w-full sm:w-auto">
           Planificador Académico UADE
         </div>
-        <ul class="flex justify-center sm:justify-start gap-4 overflow-x-auto whitespace-nowrap w-full sm:w-auto px-1 sm:px-0">
-          <li><a href="index.html" class="hover:text-indigo-300 hover:underline">Home</a></li>
-          <li><a href="sobremi.html" class="hover:text-indigo-300 hover:underline">Sobre mí</a></li>
-          <li><a href="materias2025.html" class="hover:text-indigo-300 hover:underline">Materias 2025</a></li>
-          <li><a href="contacto.html" class="hover:text-indigo-300 hover:underline">Contacto</a></li>
-        </ul>
+        <div class="flex items-center gap-4">
+          <ul class="flex justify-center sm:justify-start gap-4 overflow-x-auto whitespace-nowrap">
+            <li><a href="index.html" class="hover:text-indigo-300 hover:underline">Home</a></li>
+            <li><a href="sobremi.html" class="hover:text-indigo-300 hover:underline">Sobre mí</a></li>
+            <li><a href="materias2025.html" class="hover:text-indigo-300 hover:underline">Materias 2025</a></li>
+            <li><a href="contacto.html" class="hover:text-indigo-300 hover:underline">Contacto</a></li>
+          </ul>
+          <div class="flex gap-2">
+            <button id="theme-toggle-light" type="button" class="px-2 py-1 text-sm bg-slate-200 text-slate-800 rounded hover:bg-slate-300">☀️</button>
+            <button id="theme-toggle-dark" type="button" class="px-2 py-1 text-sm bg-slate-600 text-white rounded hover:bg-slate-500">🌙</button>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main class="flex-grow max-w-3xl w-full mx-auto px-4 sm:px-6 py-8">
-      <h1 class="text-3xl font-semibold text-center mb-8">Avisos y Recordatorios</h1>
+      <h1 class="text-3xl font-semibold text-center mb-8 dark:text-white">Avisos y Recordatorios</h1>
 
       <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2">Diseño y Desarrollo Web</h2>
+        <h2 class="text-xl font-semibold mb-2 dark:text-white">Diseño y Desarrollo Web</h2>
         <ul class="list-disc list-inside space-y-1">
           <li>20/4 - Finalizar UVA 2</li>
           <li>27/4 - Entrega TPO</li>
@@ -34,7 +55,7 @@
       </section>
 
       <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2">Introducción a la Algoritmia</h2>
+        <h2 class="text-xl font-semibold mb-2 dark:text-white">Introducción a la Algoritmia</h2>
         <ul class="list-disc list-inside space-y-1">
           <li>23/4 - Entrega de Trabajo Práctico 4</li>
           <li>27/5 - Evaluación parcial</li>
@@ -42,7 +63,7 @@
       </section>
 
       <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2">Marketing</h2>
+        <h2 class="text-xl font-semibold mb-2 dark:text-white">Marketing</h2>
         <ul class="list-disc list-inside space-y-1">
           <li>15/5 - Finalizar uva 4</li>
           <li>22/5 - Exposición oral comportamiento del consumidor</li>
@@ -50,14 +71,14 @@
       </section>
 
       <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2">Sistemas de Información</h2>
+        <h2 class="text-xl font-semibold mb-2 dark:text-white">Sistemas de Información</h2>
         <ul class="list-disc list-inside space-y-1">
           <li>25/4 - Leer capítulo 3 de la bibliografia</li>
           <li>30/4 - Resolver actividad 3.1 TPO</li>
         </ul>
       </section>
       <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2">Arquitectura de computadores</h2>
+        <h2 class="text-xl font-semibold mb-2 dark:text-white">Arquitectura de computadores</h2>
         <ul class="list-disc list-inside space-y-1">
           <li>21/4 - Primer parcial</li>
           <li>30/4 - Resolver actividad UVA 4</li>
@@ -68,5 +89,7 @@
     <footer class="bg-slate-700 text-white text-center py-4 mt-8">
       Curso: 518378 / Profesora: Patricia Litovicius
     </footer>
+
+    <script src="/assets/js/theme.js"></script>
   </body>
 </html>
