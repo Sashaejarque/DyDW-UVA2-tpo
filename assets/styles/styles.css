@@ -1,0 +1,6 @@
+.pagina-activa {
+  color: #e39315;
+  font-weight: 700;
+  pointer-events: none;
+  cursor: default;
+}
